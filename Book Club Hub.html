@@ -11,7 +11,7 @@
             padding: 20px;
             box-sizing: border-box;
             font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: rgb(113, 95, 171);
             min-height: 100vh;
             padding: 20px;
         }
@@ -23,6 +23,41 @@
             border-radius: 15px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             padding: 40px;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: -40px -40px 40px -40px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+            transition: color 0.2s;
+            padding: 5px 10px;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+            text-decoration: underline;
         }
 
         header {
@@ -44,7 +79,7 @@
         }
 
         .current-book {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: rgb(84, 146, 196);
             color: white;
             padding: 30px;
             border-radius: 10px;
@@ -102,7 +137,7 @@
             padding: 20px;
             background: #f5f5f5;
             border-radius: 8px;
-            border-left: 4px solid #764ba2;
+            border-left: 4px solid #f4f2f5;
             transition: transform 0.2s;
         }
 
@@ -153,12 +188,22 @@
 
 <body>
     <div class="container">
-        <header>
-            <h1>📚 Book Club Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#current">Current Book</a></li>
+                <li><a href="#upcoming">Upcoming</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <header id="home">
+            <h1>Book Club Hub</h1>
             <p class="tagline">Where Stories Come Alive</p>
         </header>
 
-        <div class="current-book">
+        <div class="current-book" id="current">
             <h2>Currently Reading</h2>
             <div class="book-info">
                 <div class="book-cover">
@@ -175,7 +220,7 @@
             </div>
         </div>
 
-        <div class="upcoming">
+        <div class="upcoming" id="upcoming">
             <h2>Upcoming Books</h2>
             <div class="book-list">
                 <div class="book-item">
@@ -199,7 +244,7 @@
             </div>
         </div>
 
-        <a href="#" class="join-button">Join Our Book Club</a>
+        <a href="#contact" class="join-button">Join Our Book Club</a>
     </div>
 </body>
 
